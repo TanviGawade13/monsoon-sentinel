@@ -361,3 +361,7 @@ button {
     transform: scale(1.15);
   }
 }
+/* UI cleanup per request */
+.btn-signin { display: none !important; }
+.badge-crs { display: none !important; }
+.eta-prediction-card { display: none !important; }

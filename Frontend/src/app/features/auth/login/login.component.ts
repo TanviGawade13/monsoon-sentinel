@@ -79,7 +79,6 @@ import { ThemeService } from '../../../core/services/theme.service';
           <!-- Glass Form Card -->
           <div class="auth-card">
             <div class="card-intro">
-              <h2 class="card-title">Portal Sign In</h2>
               <p class="card-desc">Access citizen safe routes, authority controls, or system admin</p>
             </div>
 

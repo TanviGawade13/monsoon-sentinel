@@ -12,18 +12,6 @@ import { ThemeService } from '../../../core/services/theme.service';
   template: `
     <header class="app-header">
       <div class="header-left">
-        <button
-          type="button"
-          class="btn-icon mobile-menu-toggle"
-          (click)="toggleMobileMenu.emit()"
-          aria-label="Toggle navigation menu"
-        >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
 
         <span class="location-tag">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -40,17 +28,6 @@ import { ThemeService } from '../../../core/services/theme.service';
           <span class="pulse-dot"></span>
           <span class="clock-time font-mono">{{ currentTime }}</span>
         </div>
-
-        <!-- Active Alerts Trigger -->
-        <a routerLink="/alerts" class="btn-icon" aria-label="View Active Alerts" title="Active Alerts">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-          </svg>
-          @if (alertService.activeAlertsCount() > 0) {
-            <span class="alert-counter-badge">{{ alertService.activeAlertsCount() }}</span>
-          }
-        </a>
 
         <!-- Light / Dark Theme Mode Toggle -->
         <button
@@ -99,7 +76,6 @@ import { ThemeService } from '../../../core/services/theme.service';
           </div>
         } @else {
           <div class="guest-auth-actions">
-            <a routerLink="/login" class="btn btn-sm btn-outline">Sign In</a>
             <a routerLink="/register" class="btn btn-sm btn-primary">Citizen Signup</a>
           </div>
         }

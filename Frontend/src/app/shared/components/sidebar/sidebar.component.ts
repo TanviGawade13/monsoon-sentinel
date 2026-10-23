@@ -29,7 +29,7 @@ interface NavItem {
         </div>
         @if (!collapsed) {
           <div class="brand-text">
-            <span class="brand-name">CityPulse</span>
+            <span class="brand-name">Monsoon Sentinel</span>
             <span class="brand-sub">Monsoon Sentinel · Mumbai</span>
           </div>
         }
@@ -259,6 +259,10 @@ interface NavItem {
       border-radius: var(--radius-full);
     }
 
+    /* Hide Public Alerts link */
+    a.nav-link[routerLink="/alerts"] {
+      display: none !important;
+    }
     /* ─── Footer ─── */
     .sidebar-footer {
       padding: 1rem 1.25rem;
@@ -374,17 +378,13 @@ export class SidebarComponent {
       label: 'Safe Route',
       icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="19" r="3"></circle><path d="M9 19h8.5a4.5 4.5 0 0 0 0-9H7a4 4 0 0 1 0-8h11"></path><polyline points="18 5 21 2 18 -1"></polyline></svg>`
     },
-    {
-      path: '/alerts',
-      label: 'Public Alerts',
-      badge: () => this.alertService.activeAlertsCount() || null,
-      icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>`
-    },
+    
     {
       path: '/analytics',
       label: 'AI Analytics',
       icon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>`
     },
+    
     {
       path: '/admin',
       label: 'Admin Command',
