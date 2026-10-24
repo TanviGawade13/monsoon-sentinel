@@ -1,135 +1,173 @@
-// Design Tokens & Semantic Variables - FloodWatch AI
+/* ==========================================================
+   MONSOON SENTINEL — DESIGN SYSTEM
+   Flood Intelligence & Emergency Operations
+   ========================================================== */
+
 :root {
-  // Brand Palette - Smart City EOC
-  --brand-primary: #2563eb;
-  --brand-primary-hover: #1d4ed8;
-  --brand-primary-glow: rgba(37, 99, 235, 0.25);
-  --brand-cyan: #06b6d4;
-  --brand-indigo: #6366f1;
+  color-scheme: dark;
 
-  // Neutral / Background Colors (Dark Operations Center Theme by default)
-  --bg-darkest: #0a0f1d;
-  --bg-dark: #0f172a;
-  --bg-card: #1e293b;
-  --bg-card-hover: #24344d;
-  --bg-card-subtle: rgba(30, 41, 59, 0.7);
-  --bg-glass: rgba(15, 23, 42, 0.85);
-  --border-subtle: #334155;
-  --border-light: rgba(148, 163, 184, 0.15);
-  --border-focus: #60a5fa;
+  /* Brand — restrained electric blue and operational teal */
+  --brand-primary: #4f83ff;
+  --brand-primary-hover: #719aff;
+  --brand-primary-glow: rgba(79, 131, 255, 0.16);
+  --brand-cyan: #35c6d9;
+  --brand-indigo: #818cf8;
 
-  // Typography Colors
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --text-dim: #64748b;
-  --text-inverse: #0f172a;
+  /* Application surfaces */
+  --bg-darkest: #080d18;
+  --bg-dark: #0d1423;
+  --bg-card: #151f31;
+  --bg-card-hover: #1b2940;
+  --bg-card-subtle: rgba(21, 31, 49, 0.72);
+  --bg-glass: rgba(13, 20, 35, 0.92);
 
-  // Semantic Status & Risk Levels (Government & Emergency Standard)
-  --status-safe: #10b981;          // Green (No / Safe risk)
-  --status-safe-bg: rgba(16, 185, 129, 0.12);
-  --status-safe-border: rgba(16, 185, 129, 0.35);
+  /* Borders — subtle definition instead of heavy outlines */
+  --border-subtle: #29364b;
+  --border-light: rgba(164, 184, 212, 0.12);
+  --border-focus: #75a2ff;
 
-  --status-low: #06b6d4;           // Cyan / Light Blue-Green
-  --status-low-bg: rgba(6, 182, 212, 0.12);
-  --status-low-border: rgba(6, 182, 212, 0.35);
+  /* Typography */
+  --text-main: #f1f5fc;
+  --text-muted: #a4b3c9;
+  --text-dim: #74859e;
+  --text-inverse: #09111f;
 
-  --status-caution: #f59e0b;       // Amber / Medium Risk
-  --status-caution-bg: rgba(245, 158, 11, 0.12);
-  --status-caution-border: rgba(245, 158, 11, 0.35);
+  /* Safe */
+  --status-safe: #34d399;
+  --status-safe-bg: rgba(52, 211, 153, 0.10);
+  --status-safe-border: rgba(52, 211, 153, 0.24);
 
-  --status-unsafe: #f97316;        // Orange / High Risk
-  --status-unsafe-bg: rgba(249, 115, 22, 0.15);
-  --status-unsafe-border: rgba(249, 115, 22, 0.4);
+  /* Informational */
+  --status-low: #35c6d9;
+  --status-low-bg: rgba(53, 198, 217, 0.10);
+  --status-low-border: rgba(53, 198, 217, 0.24);
 
-  --status-critical: #ef4444;      // Red / Unsafe / Evacuation
-  --status-critical-bg: rgba(239, 68, 68, 0.15);
-  --status-critical-border: rgba(239, 68, 68, 0.4);
+  /* Caution */
+  --status-caution: #f5bd55;
+  --status-caution-bg: rgba(245, 189, 85, 0.10);
+  --status-caution-border: rgba(245, 189, 85, 0.25);
 
-  --status-severe: #dc2626;        // Dark Red
-  --status-severe-bg: rgba(220, 38, 38, 0.2);
+  /* High risk */
+  --status-unsafe: #fb923c;
+  --status-unsafe-bg: rgba(251, 146, 60, 0.11);
+  --status-unsafe-border: rgba(251, 146, 60, 0.26);
 
+  /* Critical / evacuation */
+  --status-critical: #ff6678;
+  --status-critical-bg: rgba(255, 102, 120, 0.11);
+  --status-critical-border: rgba(255, 102, 120, 0.27);
 
-  // Shadows & Radii
+  --status-severe: #e5485d;
+  --status-severe-bg: rgba(229, 72, 93, 0.15);
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.16);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.18);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.26);
+
+  --shadow-glow-blue: 0 0 18px rgba(79, 131, 255, 0.12);
+  --shadow-glow-red: 0 0 18px rgba(255, 102, 120, 0.14);
+
+  /* Geometry */
   --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --radius-xl: 18px;
+  --radius-md: 9px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
   --radius-full: 9999px;
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.45);
-  --shadow-glow-blue: 0 0 20px rgba(59, 130, 246, 0.2);
-  --shadow-glow-red: 0 0 20px rgba(239, 68, 68, 0.25);
-
-  // Spacing & Layout
+  /* Spacing */
   --fw-space-xs: 0.25rem;
   --fw-space-sm: 0.5rem;
   --fw-space-md: 1rem;
   --fw-space-lg: 1.5rem;
   --fw-space-xl: 2rem;
 
+  /* Application layout */
   --sidebar-width: 260px;
   --sidebar-collapsed-width: 72px;
   --header-height: 64px;
+
+  /* Motion — smooth, restrained transitions */
   --transition-fast: 0.18s ease;
   --transition-normal: 0.28s ease;
 }
 
-// Light Mode Overrides
-[data-theme="light"], .theme-light {
-  --brand-primary: #1d4ed8;
-  --brand-primary-hover: #1e40af;
-  --brand-primary-glow: rgba(29, 78, 216, 0.18);
-  --brand-cyan: #0284c7;
-  --brand-indigo: #4f46e5;
+/* ==========================================================
+   LIGHT THEME
+   Clean, high-contrast operational workspace
+   ========================================================== */
 
-  // Clean, high-contrast Slate / Zinc neutral system
-  --bg-darkest: #f1f5f9;           // Canvas background (Slate 100)
-  --bg-dark: #ffffff;              // App Header, Sidebar, Navbars
-  --bg-card: #ffffff;              // Card background
-  --bg-card-hover: #f8fafc;        // Card hover state
-  --bg-card-subtle: #f8fafc;
-  --bg-glass: rgba(255, 255, 255, 0.88);
-  --border-subtle: #e2e8f0;        // Slate 200
-  --border-light: rgba(148, 163, 184, 0.3);
-  --border-focus: #3b82f6;
+[data-theme="light"],
+.theme-light {
+  color-scheme: light;
 
-  // Crisp readable typography
-  --text-main: #0f172a;            // Slate 900
-  --text-muted: #334155;           // Slate 700
-  --text-dim: #64748b;             // Slate 500
+  /* Brand */
+  --brand-primary: #285bc5;
+  --brand-primary-hover: #204ba8;
+  --brand-primary-glow: rgba(40, 91, 197, 0.10);
+  --brand-cyan: #087f95;
+  --brand-indigo: #5546c7;
+
+  /* Surfaces */
+  --bg-darkest: #f3f6fb;
+  --bg-dark: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f6f8fc;
+  --bg-card-subtle: #f8faff;
+  --bg-glass: rgba(255, 255, 255, 0.94);
+
+  /* Borders */
+  --border-subtle: #dce4ef;
+  --border-light: rgba(36, 57, 88, 0.10);
+  --border-focus: #356fe0;
+
+  /* Typography */
+  --text-main: #152238;
+  --text-muted: #52637b;
+  --text-dim: #7b8ba2;
   --text-inverse: #ffffff;
 
-  // Semantic Status adjustments for Light Mode readability
-  --status-safe: #059669;
-  --status-safe-bg: rgba(5, 150, 105, 0.1);
-  --status-safe-border: rgba(5, 150, 105, 0.3);
+  /* Safe */
+  --status-safe: #087f5b;
+  --status-safe-bg: rgba(8, 127, 91, 0.08);
+  --status-safe-border: rgba(8, 127, 91, 0.22);
 
-  --status-low: #0284c7;
-  --status-low-bg: rgba(2, 132, 199, 0.1);
-  --status-low-border: rgba(2, 132, 199, 0.3);
+  /* Informational */
+  --status-low: #087f95;
+  --status-low-bg: rgba(8, 127, 149, 0.08);
+  --status-low-border: rgba(8, 127, 149, 0.22);
 
-  --status-caution: #d97706;
-  --status-caution-bg: rgba(217, 119, 6, 0.1);
-  --status-caution-border: rgba(217, 119, 6, 0.3);
+  /* Caution */
+  --status-caution: #996000;
+  --status-caution-bg: rgba(217, 145, 18, 0.10);
+  --status-caution-border: rgba(153, 96, 0, 0.23);
 
-  --status-unsafe: #ea580c;
-  --status-unsafe-bg: rgba(234, 88, 12, 0.1);
-  --status-unsafe-border: rgba(234, 88, 12, 0.3);
+  /* High risk */
+  --status-unsafe: #c45a12;
+  --status-unsafe-bg: rgba(196, 90, 18, 0.08);
+  --status-unsafe-border: rgba(196, 90, 18, 0.22);
 
-  --status-critical: #dc2626;
-  --status-critical-bg: rgba(220, 38, 38, 0.1);
-  --status-critical-border: rgba(220, 38, 38, 0.3);
+  /* Critical */
+  --status-critical: #c52d43;
+  --status-critical-bg: rgba(197, 45, 67, 0.08);
+  --status-critical-border: rgba(197, 45, 67, 0.22);
 
-  --status-severe: #991b1b;
-  --status-severe-bg: rgba(153, 27, 27, 0.12);
+  --status-severe: #a51f35;
+  --status-severe-bg: rgba(165, 31, 53, 0.10);
 
+  /* Elevation */
+  --shadow-sm:
+    0 1px 2px rgba(20, 37, 64, 0.04),
+    0 1px 3px rgba(20, 37, 64, 0.03);
 
-  // Shadows
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
-  --shadow-glow-blue: 0 0 20px rgba(37, 99, 235, 0.12);
-  --shadow-glow-red: 0 0 20px rgba(220, 38, 38, 0.15);
+  --shadow-md:
+    0 4px 12px rgba(20, 37, 64, 0.06),
+    0 1px 3px rgba(20, 37, 64, 0.03);
+
+  --shadow-lg:
+    0 12px 30px rgba(20, 37, 64, 0.08),
+    0 3px 8px rgba(20, 37, 64, 0.03);
+
+  --shadow-glow-blue: 0 0 16px rgba(40, 91, 197, 0.07);
+  --shadow-glow-red: 0 0 16px rgba(197, 45, 67, 0.08);
 }
