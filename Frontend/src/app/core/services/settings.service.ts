@@ -1,7 +1,7 @@
 import { Injectable, signal } from '@angular/core';
 import { AppSettings, DEFAULT_SETTINGS } from '../models/settings.model';
 
-const STORAGE_KEY = 'floodwatch_ai_settings_v1';
+const STORAGE_KEY = 'flood_watch_ai_settings_v1';
 
 @Injectable({
   providedIn: 'root'

@@ -436,60 +436,9 @@ import { LoadingStateComponent } from '../../shared/components/loading-state/loa
             }
           </div>
         </div>
-      </div>
+      
 
-      <!-- AI HYDRODYNAMIC NOWCAST (Mumbai DNO Hydrodynamic Engine) -->
-      <div class="card dno-hydrodynamic-card">
-        <!-- Header -->
-        <div class="dno-card-header">
-          <div class="dno-title-group">
-            <div class="dno-badge-row">
-              <span class="dno-pill-pulse"><span class="pulse-dot-cyan"></span> AI HYDRODYNAMIC NOWCAST</span>
-              <span class="dno-tag font-mono">MUMBAI HYDRODYNAMIC DNO</span>
-              <span class="dno-tag font-mono">ALPHA = 1.00</span>
-              <span class="dno-tag font-mono">128 × 128 (78.1m)</span>
-              <span class="dno-tag-device font-mono" [class.device-cuda]="dnoService.health()?.device?.includes('cuda')">
-                ⚡ {{ (dnoService.health()?.device || 'CUDA/CPU') | uppercase }}
-              </span>
-            </div>
-            <h3 class="dno-main-title">Mumbai Hydrodynamic Depth & Velocity Forecasting</h3>
-            <p class="dno-sub-text">
-              High-resolution Deep Neural Operator (DNO) surrogate simulating physical 2D Navier-Stokes/Saint-Venant
-              water depth (H), velocity vectors (U, V), and localized saucer ponding across the Kurla–Mithi pilot basin.
-            </p>
-          </div>
-
-          <!-- Event Selector & Action -->
-          <div class="dno-event-controls">
-            <div class="dno-select-wrap">
-              <label class="dno-select-label">Select Mumbai Flood Event:</label>
-              <select
-                class="dno-event-select font-mono"
-                [value]="dnoService.selectedEventId()"
-                (change)="onDnoEventChange($event)"
-                [disabled]="dnoService.isPredicting()"
-              >
-                @for (ev of dnoService.availableEvents()?.events; track ev.id) {
-                  <option [value]="ev.id">
-                    {{ ev.id }} • {{ ev.rainfall_mm }}mm ({{ ev.category }})
-                  </option>
-                }
-              </select>
-            </div>
-            <button
-              type="button"
-              class="btn btn-primary dno-run-btn"
-              (click)="runDnoForecast()"
-              [disabled]="dnoService.isPredicting()"
-            >
-              @if (dnoService.isPredicting()) {
-                <span class="btn-spinner"></span> Simulating Hydrodynamics...
-              } @else {
-                🌊 Run Hydrodynamic Forecast
-              }
-            </button>
-          </div>
-        </div>
+      
 
         <!-- Loading State Indicator -->
         @if (dnoService.isPredicting()) {
@@ -502,13 +451,7 @@ import { LoadingStateComponent } from '../../shared/components/loading-state/loa
           </div>
         }
 
-        <!-- Error State -->
-        @if (dnoService.errorMessage()) {
-          <div class="dno-error-banner">
-            <span class="dno-err-icon">⚠️</span>
-            <span>{{ dnoService.errorMessage() }}</span>
-          </div>
-        }
+        
 
         <!-- Prediction Content (When Available) -->
         @if (dnoService.currentPrediction(); as pred) {
@@ -2643,7 +2586,7 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
     public alertService: AlertService,
     public themeService: ThemeService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.initGreetingAndDate();

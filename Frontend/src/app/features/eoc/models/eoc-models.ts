@@ -1,5 +1,5 @@
 /**
- * FloodWatch AI — EOC Command Center typed data contracts.
+ * Monsoon Sentinel — EOC Command Center typed data contracts.
  * Mumbai (BMC / MCGM) is the fixed operational geography.
  *
  * These interfaces mirror the intended FastAPI responses so the

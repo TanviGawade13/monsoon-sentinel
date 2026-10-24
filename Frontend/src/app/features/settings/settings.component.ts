@@ -250,7 +250,7 @@ import { AppSettings } from '../../core/models/settings.model';
           <div class="storage-info-box">
             <p>
               Settings are stored client-side in browser <strong>LocalStorage</strong> under key:
-              <code class="font-mono">floodwatch_ai_settings_v1</code>.
+              <code class="font-mono">monsoon_sentinel_settings_v1</code>.
             </p>
             <p style="margin-top: 0.5rem;">
               These settings sync with your active browser profile and the backend API.
